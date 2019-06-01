@@ -10,20 +10,22 @@ import torch.nn.functional as F
 
 # Hyper parameters
 # path to shapenet
-datapath = '/home/yuka/shapenetcore_partanno_segmentation_benchmark_v0/'
+datapath = './shapenetcore_partanno_segmentation_benchmark_v0/'
 # resample to some points
 num_points = 2500
 # how many inputs you load to NN at the same time
-batchsize = 20
+batchsize = 24
 # how many epoch to iterate
 epochsize = 1
+# workers
+workers = 6
 
 # load shapenet datasets
 dataset = ShapeNetDataset(datapath, classification=True, npoints=num_points)
 testset = ShapeNetDataset(datapath, classification=True, npoints=num_points)
 
-dataloader = torch.utils.data.DataLoader(dataset, batchsize, shuffle=True, num_workers=5)
-testdataloader = torch.utils.data.DataLoader(testset, batchsize, shuffle=True, num_workers=5)
+dataloader = torch.utils.data.DataLoader(dataset, batchsize, shuffle=True, num_workers=workers)
+testdataloader = torch.utils.data.DataLoader(testset, batchsize, shuffle=True, num_workers=workers)
 
 num_classes = len(dataset.classes)
 print(num_classes)
