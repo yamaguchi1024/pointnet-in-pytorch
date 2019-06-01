@@ -27,7 +27,6 @@ class PointNetCls(nn.Module):
         self.dropout = nn.Dropout(p=0.3)
 
     def forward(self, x):
-        batchsize = x.size()[0]
         x = F.relu(self.bn1(self.conv1(x)))
         x = F.relu(self.bn2(self.conv2(x)))
         x = F.relu(self.bn3(self.conv3(x)))

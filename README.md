@@ -1,6 +1,8 @@
-Simple PointNet implementation in Pytorch
+### (Probably) the simplest PointNet implementation in Pytorch
+- Neural network uses only 10 lines of code (model.py)
+- Operates shape classification task on ShapeNet
 
-usage
+### Usage
 ```
 cd pointnet.pytorch
 ./download.sh
