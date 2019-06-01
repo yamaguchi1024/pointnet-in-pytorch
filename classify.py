@@ -14,9 +14,9 @@ datapath = './shapenetcore_partanno_segmentation_benchmark_v0/'
 # resample to some points
 num_points = 2500
 # how many inputs you load to NN at the same time
-batchsize = 24
+batchsize = 32
 # how many epoch to iterate
-epochsize = 1
+epochsize = 250
 # workers
 workers = 6
 
@@ -40,6 +40,7 @@ classifier.cuda()
 
 for epoch in range(epochsize):
     scheduler.step()
+    print("epoch: ", epoch)
     for i, data in enumerate(dataloader, 0):
         points, target = data
         target = target[:, 0]
@@ -53,7 +54,6 @@ for epoch in range(epochsize):
         loss.backward()
 
         optimizer.step()
-        print(i)
 
 total_correct = 0
 total_testset = 0
