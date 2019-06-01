@@ -9,3 +9,7 @@ cd pointnet.pytorch
 cd ..
 python3 classify.py
 ```
+
+### Requirements
+- Pytorch
+- CUDA (You can workaround by commenting out something.cuda() calls)
