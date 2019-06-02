@@ -16,9 +16,10 @@ python3 classify.py
 
 ### Classification performance
 On [A subset of shapenet](http://web.stanford.edu/~ericyi/project_page/part_annotation/index.html), epoch=250, batchsize=32, number of points in the pointcloud data = 2500.
+
 |  | Overall Acc |
 | :---: | :---: |
 | Original implementation | N/A |
-| pointnet.pytorch(w/o feature transform) | 98.1 |
-| pointnet.pytorch(w/ feature transform) | 97.7 |
+| [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch)(w/o feature transform) | 98.1 |
+| [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch)(w/ feature transform) | 97.7 |
 | This Implementation | 99.8 |
