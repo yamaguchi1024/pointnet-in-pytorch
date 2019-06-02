@@ -19,6 +19,6 @@ On [A subset of shapenet](http://web.stanford.edu/~ericyi/project_page/part_anno
 |  | Overall Acc |
 | :---: | :---: |
 | Original implementation | N/A |
-| [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch)(w/o feature transform) | 98.1 |
-| [pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch)(w/ feature transform) | 97.7 |
+| pointnet.pytorch(w/o feature transform) | 98.1 |
+| pointnet.pytorch(w/ feature transform) | 97.7 |
 | This Implementation | 99.8 |
